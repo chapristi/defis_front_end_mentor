@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+$almost-white: hsl(0, 0%, 98%);
+$medium-gray: hsl(0, 0%, 41%);
+$almost-black: hsl(0, 0%, 8%);
+html,body{
+  margin: 0;
+  width: 100%;
+}
+section{
+  article{
+    display: flex;
+    justify-content : center;
+
+    .article-container{
+
+      max-width: 450px;
+      .logo-container{
+        display  : flex ;
+        justify-content : center;
+        margin-top : 35%;
+        img{
+          margin-right: 5%;
+        }
+
+
+      }
+
+      h1{
+        margin-top : 30%;
+        font-size :65px;
+        font-family: 'Epilogue', sans-serif;
+      }
+      p{
+        color: $medium-gray;
+        font-family: 'Epilogue', sans-serif;
+        margin-bottom: 60px;
+      }
+      a{
+        font-family: 'Epilogue', sans-serif;
+        text-decoration:none;
+        padding: 15px;
+        border: 1px solid;
+        border-radius: 10px;
+
+      }
+    }
+    .illustration-container{
+      width : 500px;
+      height:650px;
+      img{
+        height: 100%;
+        width : 100%;
+      }
+    }
+  }
+}
+
+@media(max-width : 752px){
+
+  section {
+    article {
+      .logo-container{
+        img{
+          height : 3%;
+          width : 20%;
+        }
+      }
+        .illustration-container{
+          width: 600px;
+          height: 450px;
+          margin-top: 20%;
+
+
+      }
+    }
+  }
+}
+@media(max-width :472px){
+
+  section {
+    article {
+
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      .article-container{
+
+        h1{
+          text-align: center;
+          font-size:45px;
+          margin-top :10%;
+        }
+        p{
+
+
+          font-size:30px;
+          text-align: center;
+          padding-left : 6%;
+          padding-right : 6%;
+        }
+        a{
+          position: absolute; /* postulat de départ */
+       left: 50%; /* à 50%/50% du parent référent */
+          transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+        }
+
+      }
+      .illustration-container {
+        max-width: 100%;
+        max-height: 400px;
+        margin: 0;
+        img {
+          height:100%;
+          width: 100%;
+        }
+
+
+      }
+    }
+  }
+}
+
+
+
